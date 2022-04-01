@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::placeholder {
+  color: hotpink;
+  opacity: 1;
+  font-weight: normal;
+}
+
+:-ms-input-placeholder {
+ color: hotpink;
+ font-weight: normal;
+}
+
+::-ms-input-placeholder {
+ color: hotpink;
+ font-weight: normal;
+}
+
+h1, h2 {
+  color: hotpink;
+  text-align: center;
+}
+
+.header {
+  margin: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header h1 {
+  color: black;
+}
+
+.login {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login div, .login a {
+  padding-left: 1em;
+}
+
+.content {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.profile {
+  display: flex;
+  width: 500px;
+  background-color: lightcyan;
+  margin: 0 auto;
+  padding: 1em;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+.center {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: turquoise;
+  transition: 0.3s;
+}
+
+a:hover,
+a:focus {
+  color: hotpink;
+}
+
+form {
+  margin: 0 auto;
+  width: 25%;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  outline: none;
+  border: none;
+  background-color: whitesmoke;
+  border-radius: 6px;
+  padding: .5em;
+  margin-bottom: .5em;
+  font-family: 'Open Sans', sans-serif;
+  font-size: .9rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+input:hover,
+input:focus {
+  color: hotpink;
+}
+
+button {
+  background-color: turquoise;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: .7em 1.2em;
+  margin-bottom: .5em;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  transition: 0.3s;
+  color: white;
+  text-transform: uppercase;
+}
+
+button:hover, 
+button:focus {
+  background-color: hotpink;
+}
+
+.error {
+  color: red;
+  font-size: .8rem;
+  padding-bottom: 1em;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.slideshow {
+  margin: 0 auto;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.slideshowSlider {
+  white-space: nowrap;
+  transition: ease 1000ms;
+}
+
+.slide {
+  display: inline-block;
+  height: 350px;
+  width: 100%;
+}
+
+.slideshowDots {
+  text-align: center;
+}
+
+.slideshowDot {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: lightgray;
+}
+
+.slideshowDot.active {
+  background-color: hotpink;
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  font-weight: normal;
+  padding: 1em;
+}
