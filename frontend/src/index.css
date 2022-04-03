@@ -57,6 +57,10 @@ h1, h2 {
   padding-left: 1em;
 }
 
+nav {
+  padding-left: 1em;
+}
+
 .content {
   margin: 0 auto;
   width: 100%;
