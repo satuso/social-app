@@ -5,15 +5,27 @@ const app = express()
 const users = [
   {
     id: 1,
-    username: "user1",
+    username: "kitten_1",
     email: "email@email.com",
-    profilepic: "./images/cat1.jpg",
+    profilePic: "/images/cat1.jpg",
   },
   {
     id: 2,
-    username: "user2",
+    username: "hellocat",
     email: "email@email.com",
-    profilepic: "./images/cat2.jpg",
+    profilePic: "/images/cat2.jpg",
+  },
+  {
+    id: 3,
+    username: "cat3",
+    email: "email@email.com",
+    profilePic: "/images/cat3.jpg",
+  },
+  {
+    id: 4,
+    username: "kissa",
+    email: "email@email.com",
+    profilePic: "/images/cat4.jpg",
   }
 ]
 

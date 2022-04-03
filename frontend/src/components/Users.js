@@ -1,13 +1,20 @@
-import React, { useContext } from "react"
-import { Context } from "../context"
-import { Link } from "react-router-dom"
+import React from "react"
+import { Link, Outlet } from "react-router-dom"
 
-const Users = () => {
-  const { users } = useContext(Context)
-
+const Users = ({ users }) => {
   return (
     <>
-      {users && users.map(user => <Link key={user.id} to={`/users/${user.username}`}>{user.username}</Link>)}
+      <h2>Users</h2>
+      <ul>
+        {users.map((user) => (
+          <li key={user.id}>
+            <Link to={`/users/${user.id}`}>
+              {user.username}
+            </Link>
+          </li>
+        ))}
+      </ul>
+      <Outlet />
     </>
   )
 }

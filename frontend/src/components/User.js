@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { useParams } from "react-router"
-import Loading from "../components/Loading"
+import { useParams } from "react-router-dom"
 
 const User = () => {
+  const { userId } = useParams()
   const [user, setUser] = useState([])
-
-  let { id } = useParams()
 
   useEffect(() => {
     const sendGetRequest = async () => {
       try {
-        const res = await axios.get(`http://localhost:3001/api/users/${id}`)
-        console.log(res.data)
+        const res = await axios.get(`http://localhost:3001/api/users/${userId}`)
         setUser(res.data)
       } catch (err) {
         console.log(err)
@@ -21,18 +18,14 @@ const User = () => {
     sendGetRequest()
   }, [])
 
-  return user ? (
-    <div className="content">
-      <h2>{user.username}</h2>
-      <div className="profile">
-        <ul>
-          <li>Username: {user.username}</li>
-          <li>Email: {user.email}</li>
-        </ul>
+  return (
+    <div className="profile">
+      <img src={user.profilePic} alt={user.username} className="profile-pic"/>
+      <div>
+        <h2>{user.username}</h2>
+        <p>{user.email}</p>
       </div>
     </div>
-  ) : (
-    <Loading />
   )
 }
 

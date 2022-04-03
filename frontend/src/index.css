@@ -57,7 +57,7 @@ h1, h2 {
   padding-left: 1em;
 }
 
-nav {
+nav a {
   padding-left: 1em;
 }
 
@@ -68,6 +68,8 @@ nav {
 
 .profile {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 500px;
   background-color: lightcyan;
   margin: 0 auto;
@@ -75,8 +77,11 @@ nav {
   border-radius: 10px;
 }
 
-ul {
-  list-style: none;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .center {
@@ -143,13 +148,6 @@ button:focus {
   color: red;
   font-size: .8rem;
   padding-bottom: 1em;
-}
-
-.profile-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
 }
 
 .slideshow {
