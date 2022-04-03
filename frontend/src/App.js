@@ -10,23 +10,27 @@ import NotFound from "./components/NotFound"
 import Nav from "./components/Nav"
 import Login from "./components/Login"
 import Signup from "./components/Signup"
+import Footer from "./components/Footer"
 
 const App = () => {
   const { users } = useContext(Context)
 
   return (
     <BrowserRouter>
-      <Header />
-      <Nav />
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path="dashboard" element={<Dashboard />} />
-        <Route path="login" element={<Login />} />
-        <Route path="signup" element={<Signup />} />
-        <Route path="users" element={<Users users={users} />} />
-        <Route path="users/:userId" element={<User />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="container">
+        <Header />
+        <Nav />
+        <Routes>
+          <Route index element={<Home />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<Signup />} />
+          <Route path="users" element={<Users users={users} />} />
+          <Route path="users/:userId" element={<User />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </div>
     </BrowserRouter>
   )
 }

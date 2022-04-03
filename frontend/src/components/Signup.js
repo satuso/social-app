@@ -19,40 +19,42 @@ const Signup = () => {
   })
 
   return (
-    <div>
-      <h1>Sign Up</h1>
-      <Formik
-        initialValues={{
-          username: "",
-          email: "",
-          password: "",
-        }}
-        validationSchema={SignupSchema}
-        onSubmit={values => {
-          console.log(values)
-          navigate("/dashboard")
-        }}
-      >
-        {({ errors, touched }) => (
-          <Form>
-            <Field name="username" placeholder="username"/>
-            {errors.username && touched.username ? (
-              <div className="error">{errors.username}</div>
-            ) : null}
-            <Field name="email" type="email" placeholder="email"/>
-            {errors.email && touched.email 
-              ? 
-              <div className="error">{errors.email}</div> 
-              : null}
-            <Field name="password" type="password" placeholder="password"/>
-            {errors.password && touched.password ? (
-              <div className="error">{errors.password}</div>
-            ) : null}
-            <button type="submit">Sign Up</button>
-          </Form>
-        )}
-      </Formik>
-    </div>
+    <main>
+      <div className="form-container">
+        <h1>Sign Up</h1>
+        <Formik
+          initialValues={{
+            username: "",
+            email: "",
+            password: "",
+          }}
+          validationSchema={SignupSchema}
+          onSubmit={values => {
+            console.log(values)
+            navigate("/dashboard")
+          }}
+        >
+          {({ errors, touched }) => (
+            <Form>
+              <Field name="username" placeholder="username"/>
+              {errors.username && touched.username ? (
+                <div className="error">{errors.username}</div>
+              ) : null}
+              <Field name="email" type="email" placeholder="email"/>
+              {errors.email && touched.email 
+                ? 
+                <div className="error">{errors.email}</div> 
+                : null}
+              <Field name="password" type="password" placeholder="password"/>
+              {errors.password && touched.password ? (
+                <div className="error">{errors.password}</div>
+              ) : null}
+              <button type="submit">Sign Up</button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+    </main>
   )
 }
 export default Signup

@@ -1,12 +1,19 @@
-import React from "react"
+import React, { useState } from "react"
 import { Link, Outlet } from "react-router-dom"
+import Search from "./Search"
 
 const Users = ({ users }) => {
+  const [search, setSearch] = useState("")
+  const filteredUsers = !search ? users : users.filter(user => user.username.toLowerCase().includes(search.toLowerCase()))
   return (
-    <>
-      <h2>Users</h2>
+    <main>
+      <h1>Users</h1>
+      <Search 
+        search={search}
+        setSearch={setSearch}
+      />
       <ul>
-        {users.map((user) => (
+        {filteredUsers.sort((a, b) => a.username.localeCompare(b.username)).map((user) => (
           <li key={user.id}>
             <Link to={`/users/${user.id}`}>
               {user.username}
@@ -15,7 +22,7 @@ const Users = ({ users }) => {
         ))}
       </ul>
       <Outlet />
-    </>
+    </main>
   )
 }
 

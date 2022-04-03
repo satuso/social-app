@@ -3,7 +3,7 @@ import Slideshow from "./Slideshow"
 
 const Home = () => {
   return (
-    <div className="content">
+    <div className="home">
       <h1>Share your favourite moments.</h1>
       <Slideshow />
     </div>

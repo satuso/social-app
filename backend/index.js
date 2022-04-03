@@ -5,27 +5,58 @@ const app = express()
 const users = [
   {
     id: 1,
-    username: "kitten_1",
-    email: "email@email.com",
-    profilePic: "/images/cat1.jpg",
-  },
-  {
-    id: 2,
     username: "hellocat",
     email: "email@email.com",
-    profilePic: "/images/cat2.jpg",
-  },
-  {
-    id: 3,
-    username: "cat3",
-    email: "email@email.com",
-    profilePic: "/images/cat3.jpg",
-  },
-  {
-    id: 4,
-    username: "kissa",
-    email: "email@email.com",
-    profilePic: "/images/cat4.jpg",
+    name: "Kissa",
+    city: "Helsinki",
+    country: "Finland",
+    dateOfBirth: "01/01/2020",
+    profilePic: "/images/cat1.jpg",
+    images: [
+      {
+      image: "/images/cat1.jpg",
+      comments: [
+        {
+          id: 1,
+          userId: 2,
+          username: "hellocat",
+          message: "hello",
+          date: "01-01-2022"
+        },
+        {
+          id: 2,
+          userId: 3,
+          username: "cat3",
+          message: "meow",
+          date: "01-01-2022"
+          },
+      ]
+      },
+      {
+        image: "/images/cat2.jpg",
+        comments: [
+          {
+            id: 1,
+            userId: 2,
+            username: "hellocat",
+            message: "hello",
+            date: "01-01-2022"
+          }
+        ]
+      },
+      {
+        image: "/images/cat3.jpg",
+        comments: [
+          {
+            id: 1,
+            userId: 2,
+            username: "hellocat",
+            message: "meowww",
+            date: "01-01-2022"
+          }
+        ]
+      }
+    ]
   }
 ]
 

@@ -2,7 +2,23 @@ import React from "react"
 
 const Footer = () => {
   return (
-    <div className="footer">Social App</div>
+    <footer>
+      <div>
+        <p>Social App</p>
+        <p>Social App</p>
+        <p>Social App</p>
+      </div>
+      <div>
+        <p>Social App</p>
+        <p>Social App</p>
+        <p>Social App</p>
+      </div>
+      <div>
+        <p>Social App</p>
+        <p>Social App</p>
+        <p>Social App</p>
+      </div>
+    </footer>
   )
 }
 

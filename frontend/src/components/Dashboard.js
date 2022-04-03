@@ -2,9 +2,9 @@ import React from "react"
 
 const Dashboard = () => {
   return (
-    <div className="content">
+    <main>
       <h1>Dashboard</h1>
-    </div>
+    </main>
   )
 }
 export default Dashboard

@@ -27,12 +27,18 @@ body {
  font-weight: normal;
 }
 
-h1, h2 {
+h1, h2, h3 {
   color: hotpink;
-  text-align: center;
+  font-weight: normal;
 }
 
-.header {
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
   margin: 0;
   padding-left: 1em;
   padding-right: 1em;
@@ -42,7 +48,7 @@ h1, h2 {
   justify-content: space-between;
 }
 
-.header h1 {
+header h1 {
   color: black;
 }
 
@@ -57,24 +63,51 @@ h1, h2 {
   padding-left: 1em;
 }
 
+nav {
+  border-bottom: 1px solid whitesmoke;
+}
+
 nav a {
   padding-left: 1em;
 }
 
-.content {
+main {
   margin: 0 auto;
   width: 100%;
+  flex: 1 0 auto;
+  min-height: auto;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.home {
+  margin: 0 auto;
+  width: 100%;
+  flex: 1 0 auto;
+  min-height: auto;
+}
+
+.home h1 {
+  margin-left: .5em;
+}
+
+.profile-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .profile {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  width: 500px;
-  background-color: lightcyan;
+  justify-content: space-evenly;
+  width: 200px;
   margin: 0 auto;
   padding: 1em;
-  border-radius: 10px;
+  text-align: center;
 }
 
 .profile-pic {
@@ -82,6 +115,35 @@ nav a {
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
+  margin: 1em;
+}
+
+.images {
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.image {
+  height: 400px;
+  width: 600px;
+  object-fit: cover;
+  margin: 1em;
+}
+
+.images button {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+.comments {
+  margin: 0 auto;
+  margin-left: 3.5em;
+  text-align: left;
 }
 
 .center {
@@ -100,10 +162,20 @@ a:focus {
   color: hotpink;
 }
 
-form {
+.form-container {
   margin: 0 auto;
   width: 25%;
   text-align: center;
+}
+
+.search-form {
+  width: 300px;
+  display: flex;
+}
+
+.search-form input,
+.search-form button {
+  margin: .2em;
 }
 
 input {
@@ -156,7 +228,7 @@ button:focus {
   max-width: 100%;
 }
 
-.slideshowSlider {
+.slideshow-slider {
   white-space: nowrap;
   transition: ease 1000ms;
 }
@@ -167,11 +239,11 @@ button:focus {
   width: 100%;
 }
 
-.slideshowDots {
+.slideshow-dots {
   text-align: center;
 }
 
-.slideshowDot {
+.slideshow-dot {
   display: inline-block;
   height: 20px;
   width: 20px;
@@ -181,13 +253,18 @@ button:focus {
   background-color: lightgray;
 }
 
-.slideshowDot.active {
+.slideshow-dot.active {
   background-color: hotpink;
 }
 
-.footer {
+footer {
   width: 100%;
-  text-align: center;
+  height: 200px;
+  background-color: lightcyan;
   font-weight: normal;
-  padding: 1em;
+  font-size: .8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 4em;
 }
