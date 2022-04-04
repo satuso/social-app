@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import UserDetails from "./UserDetails"
-import Image from "./Image"
-import Comments from "./Comments"
+//import Image from "./Image"
+//import Comments from "./Comments"
 
 const User = () => {
   const { userId } = useParams()
   const [user, setUser] = useState([])
-  const [index, setIndex] = useState(0)
+  /* const [index, setIndex] = useState(0)
+
+  <Image user={user} index={index} setIndex={setIndex}/>
+  <Comments user={user} index={index}/>*/
 
   useEffect(() => {
     const sendGetRequest = async () => {
@@ -29,8 +32,7 @@ const User = () => {
       <div className="profile-page">
         <UserDetails user={user} />
         <div>
-          <Image user={user} index={index} setIndex={setIndex}/>
-          <Comments user={user} index={index}/>
+
         </div>
       </div>
     </main>

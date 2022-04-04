@@ -8,7 +8,7 @@ const Users = ({ users }) => {
   return (
     <main>
       <h1>Users</h1>
-      <Search 
+      <Search
         search={search}
         setSearch={setSearch}
       />
